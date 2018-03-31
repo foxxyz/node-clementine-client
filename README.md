@@ -3,7 +3,7 @@ Clementine Client
 
 A Node.js library for interfacing with the [Clementine Music Player](https://www.clementine-player.org/).
 
-This is as ES6 fork of emersion's [clementine-remote package](https://www.npmjs.com/package/clementine-remote) that *only* implements a bare-bones client (I.E. no library, server or browser support).
+This is an ES6 fork of [emersion's clementine-remote package](https://www.npmjs.com/package/clementine-remote) that *only* implements a bare-bones client (I.E. no library, server or browser support).
 
 Requirements
 ------------

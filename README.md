@@ -1,5 +1,5 @@
-Node Clementine Client
-======================
+Clementine Client
+=================
 
 A Node.js library for interfacing with the [Clementine Music Player](https://www.clementine-player.org/).
 
@@ -32,7 +32,7 @@ let client = new ClementineClient({host: '127.0.0.1', port: '5500', authCode: 27
 // Bind events
 client.on('connect', () => console.log('Connected!'))
 client.on('error', (err) => console.error(err))
-client.on('play', (0 => console.log('Playing')))
+client.on('play', () => console.log('Playing')))
 
 // Set volume to 50%
 client.setVolume(50)
@@ -62,13 +62,13 @@ The `disconnect` event is emitted when Clementine disconnects.
 
 #### Event: 'library'
 
- * <LibraryInfo>
+ * `<LibraryInfo>`
 
 The `library` event is emitted when a library is received from Clementine. The callback is passed a object with the current library.
 
 #### Event: 'position'
 
- * <Position>
+ * `<Position>`
 
 The `position` event is emitted while a track plays in Clementine. The callback is passed a number indicating the current position.
 
@@ -78,25 +78,25 @@ The `play` event is emitted when Clementine starts playing.
 
 #### Event: 'repeat'
 
- * <RepeatMode>
+ * `<RepeatMode>`
 
 The `repeat` event is emitted when the repeat mode is changed in Clementine. The callback is passed a string with the current RepeatMode.
 
 #### Event: 'shuffle'
 
- * <ShuffleMode>
+ * `<ShuffleMode>`
 
 The `shuffle` event is emitted when the shuffle mode is changed in Clementine. The callback is passed a string with the current ShuffleMode.
 
 #### Event: 'song'
 
- * <SongInfo>
+ * `<SongInfo>`
 
 The `song` event is emitted when the song changes in Clementine. The callback is passed a object with the current song info.
 
 #### Event: 'volume'
 
- * <Volume>
+ * `<Volume>`
 
 The `volume` event is emitted when the volume changes in Clementine. The callback is passed a volume percentage argument (int).
 
@@ -158,4 +158,4 @@ Stop playback.
 :scroll: License
 ----------------
 
-[MIT][license] © [foxxyz][website]
+[MIT](https://github.com/foxxyz/node-clementine-client/blob/master/LICENSE) © [foxxyz](https://github.com/foxxyz)

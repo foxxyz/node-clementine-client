@@ -32,5 +32,5 @@
     "url": "git+https://github.com/foxxyz/node-clementine-client.git"
   },
   "scripts": {},
-  "version": "0.8.0"
+  "version": "0.8.1"
 }

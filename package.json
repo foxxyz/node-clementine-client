@@ -1,0 +1,36 @@
+{
+  "author": {
+    "name": "Ivo Janssen",
+    "email": "hello@ivo.la"
+  },
+  "contributors": [
+    {
+      "name": "emersion"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/foxxyz/node-clementine-client/issues"
+  },
+  "dependencies": {
+    "protobufjs": "^6.8.6"
+  },
+  "description": "A Node.js library for Clementine remote protocol",
+  "devDependencies": {},
+  "homepage": "https://github.com/foxxyz/node-clementine-client",
+  "keywords": [
+    "clementine",
+    "remote",
+    "music",
+    "player",
+    "protocol"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "clementine-client",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/foxxyz/node-clementine-client.git"
+  },
+  "scripts": {},
+  "version": "0.8.0"
+}

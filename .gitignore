@@ -1,0 +1,10 @@
+# node, npm
+node_modules/
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Mac
+.DS_Store
+.supported

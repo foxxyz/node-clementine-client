@@ -8,10 +8,12 @@ class Client extends EventEmitter {
         super()
         this.conn = new Connection({ host, port })
         this.authCode = authCode
-        this.conn.on('connect', this.connected.bind(this))
+        this.connected = false
+        this.conn.on('connect', this.connect.bind(this))
         this.conn.on('message', this.receive.bind(this))
+        this.conn.on('error', this.error.bind(this))
     }
-    connected() {
+    connect() {
         var req = {
             sendPlaylistSongs: true,
             downloader: false
@@ -19,6 +21,7 @@ class Client extends EventEmitter {
         if (typeof this.authCode == 'number') {
             req.authCode = this.authCode
         }
+        this.connected = true
         this.write({
             type: 'CONNECT',
             requestConnect: req
@@ -36,8 +39,11 @@ class Client extends EventEmitter {
     }
     disconnect() {
         this.write({type: 'DISCONNECT'})
+        this.connected = false
+        this.emit('disconnect')
     }
-    end() {
+    error() {
+        this.connected = false
         this.disconnect()
     }
     getLibrary() {
@@ -167,6 +173,10 @@ class Client extends EventEmitter {
         this.write({type: 'STOP'})
     }
     write() {
+        if (!this.connected) {
+            console.warn("Message not sent: No connection")
+            return
+        }
         this.conn.write(...arguments)
     }
 }

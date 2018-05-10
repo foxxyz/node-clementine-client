@@ -8,7 +8,7 @@ class Connection extends Duplex {
     constructor({ host, port }) {
         super()
         this.socket = net.connect({ host, port })
-        this.buf = new Buffer(0)
+        this.buf = Buffer.alloc(0)
         this.len = null
         this.socket.on('connect', this.emit.bind(this, 'connect'))
         this.socket.on('data', this.receive.bind(this))
@@ -51,7 +51,7 @@ class Connection extends Duplex {
     write(msgData) {
         let msg = Message.fromObject(msgData)
         let bufferData = Message.encode(msg).finish()
-        let bufferHeader = new Buffer(4)
+        let bufferHeader = Buffer.alloc(4)
         bufferHeader.writeUInt32BE(bufferData.length, 0)
         let buf = Buffer.concat([bufferHeader, bufferData])
         this.socket.write(buf)

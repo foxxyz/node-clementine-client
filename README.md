@@ -8,7 +8,7 @@ This is an ES6 fork of [emersion's clementine-remote package](https://www.npmjs.
 Requirements
 ------------
 
-### Node.js 7+
+### Node.js 10+
 
  * OSX: `brew install node` using [Homebrew](http://brew.sh/)
  * Linux: `apt install nodejs` ([see Ubuntu/Debian specific instructions](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions)) or `pacman -S nodejs` (Arch Linux)
@@ -27,7 +27,7 @@ Example
 const ClementineClient = require('clementine-client')
 
 // Create client
-let client = new ClementineClient({host: '127.0.0.1', port: '5500', authCode: 2738})
+const client = new ClementineClient({host: '127.0.0.1', port: '5500', authCode: 2738})
 
 // Bind events
 client.on('connect', () => console.log('Connected!'))

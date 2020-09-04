@@ -3,6 +3,9 @@
     "name": "Ivo Janssen",
     "email": "hello@ivo.la"
   },
+  "scripts": {
+    "lint": "eslint ."
+  },
   "contributors": [
     {
       "name": "emersion"
@@ -15,7 +18,9 @@
     "protobufjs": "^6.10.1"
   },
   "description": "A Node.js library for Clementine remote protocol",
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^7.8.1"
+  },
   "homepage": "https://github.com/foxxyz/node-clementine-client",
   "keywords": [
     "clementine",
@@ -31,6 +36,57 @@
     "type": "git",
     "url": "git+https://github.com/foxxyz/node-clementine-client.git"
   },
-  "scripts": {},
-  "version": "0.9.1"
+  "version": "0.9.1",
+  "eslintConfig": {
+    "env": {
+      "es6": true,
+      "node": true
+    },
+    "extends": [
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2019,
+      "sourceType": "module"
+    },
+    "rules": {
+      "eqeqeq": [
+        "error",
+        "always"
+      ],
+      "indent": [
+        "error",
+        4
+      ],
+      "linebreak-style": [
+        "error",
+        "unix"
+      ],
+      "quotes": [
+        "error",
+        "single"
+      ],
+      "no-console": [
+        "error",
+        {
+          "allow": [
+            "warn",
+            "info",
+            "error"
+          ]
+        }
+      ],
+      "object-curly-spacing": [
+        "error",
+        "always"
+      ],
+      "prefer-const": [
+        "error"
+      ],
+      "semi": [
+        "error",
+        "never"
+      ]
+    }
+  }
 }

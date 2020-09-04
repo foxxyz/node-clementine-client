@@ -49,11 +49,11 @@ class Connection extends Duplex {
         }
     }
     write(msgData) {
-        let msg = Message.fromObject(msgData)
-        let bufferData = Message.encode(msg).finish()
-        let bufferHeader = Buffer.alloc(4)
+        const msg = Message.fromObject(msgData)
+        const bufferData = Message.encode(msg).finish()
+        const bufferHeader = Buffer.alloc(4)
         bufferHeader.writeUInt32BE(bufferData.length, 0)
-        let buf = Buffer.concat([bufferHeader, bufferData])
+        const buf = Buffer.concat([bufferHeader, bufferData])
         this.socket.write(buf)
     }
     end() {

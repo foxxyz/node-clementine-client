@@ -15,11 +15,11 @@
     "url": "https://github.com/foxxyz/node-clementine-client/issues"
   },
   "dependencies": {
-    "protobufjs": "^6.10.1"
+    "protobufjs": "^6.11.2"
   },
   "description": "A Node.js library for Clementine remote protocol",
   "devDependencies": {
-    "eslint": "^7.8.1"
+    "eslint": "^7.26.0"
   },
   "homepage": "https://github.com/foxxyz/node-clementine-client",
   "keywords": [

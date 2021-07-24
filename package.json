@@ -36,7 +36,7 @@
     "type": "git",
     "url": "git+https://github.com/foxxyz/node-clementine-client.git"
   },
-  "version": "1.0.2",
+  "version": "1.0.3",
   "eslintConfig": {
     "env": {
       "es6": true,

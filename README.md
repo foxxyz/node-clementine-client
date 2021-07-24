@@ -12,12 +12,14 @@ Requirements
 
  * OSX: `brew install node` using [Homebrew](http://brew.sh/)
  * Linux: `apt install nodejs` ([see Ubuntu/Debian specific instructions](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions)) or `pacman -S nodejs` (Arch Linux)
- * Windows: [Install](https://nodejs.org/en/download/)
+ * Windows: `choco install nodejs` using [chocolatey](https://chocolatey.org/)
 
 Installation
 ------------
 
- * `npm install clementine-client`
+```bash
+npm install clementine-client
+```
 
 Example
 -------
